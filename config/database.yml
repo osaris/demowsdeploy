@@ -47,6 +47,14 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+staging:
+  <<: *default
+  host: <%= ENV['WEBAPPSERVER_MYSQL_1_PORT_3306_TCP_ADDR'] %>
+  database: <%= ENV['MYSQL_USERNAME'] %>
+  username: <%= ENV['MYSQL_USERNAME'] %>
+  password: <%= ENV['MYSQL_PASSWORD'] %>
+
+
 production:
   <<: *default
   database: demowsdeploy_production
