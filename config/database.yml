@@ -49,7 +49,7 @@ test:
 #
 staging:
   <<: *default
-  host: <%= ENV['WEBAPPSERVER_MYSQL_1_PORT_3306_TCP_ADDR'] %>
+  host: mysql
   database: <%= ENV['MYSQL_USERNAME'] %>
   username: <%= ENV['MYSQL_USERNAME'] %>
   password: <%= ENV['MYSQL_PASSWORD'] %>
